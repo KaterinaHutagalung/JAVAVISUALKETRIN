@@ -1,25 +1,2 @@
-# Character Manager — TP3 (Java Visual SIH-6406)
-
-## Deskripsi Singkat
-Aplikasi berbasis Java ini dirancang untuk mengelola data karakter game, termasuk manajemen atribut dasar, tipe karakter, level, serta status kesehatan (`hitPoints` dan `mana`). Program ini juga mengimplementasikan validasi data untuk mencegah nilai negatif serta pengecekan status hidup karakter secara dinamis menggunakan method `isAlive()`.
-
----
-
-## Screenshot Output Terminal
-*(Lampirkan tangkapan layar / screenshot hasil output program Anda di sini, pastikan menampilkan hasil pemanggilan method `isAlive()`)*
-
-```text
---- Daftar Karakter Awal ---
-Character{name='Arthas', type=WARRIOR, level=5, hitPoints=150, mana=80}
-Character{name='Jaina', type=MAGE, level=4, hitPoints=90, mana=150}
-Character{name='Sylvanas', type=ARCHER, level=6, hitPoints=120, mana=100}
-
---- Demo Level Up (Arthas naik level) ---
-Character{name='Arthas', type=WARRIOR, level=6, hitPoints=170, mana=90}
-
---- Pengujian Fitur Baru (Bagian B) ---
-Character{name='Illidan', type=ASSASSIN, level=10, hitPoints=200, mana=120}
-Apakah Illidan masih hidup? true
-Validasi Exception berhasil ditangkap: Mana tidak boleh negatif!
-https://drive.google.com/drive/folders/1guILGLui4rd1lZX6_X30WM1CtS0vwNYU
-
+Penjelasan Aliran Data & Pola Arsitektur (MVC)Kelas Main sebagai Titik Masuk (Entry Point):Berfungsi untuk menginisialisasi sistem dan membuat objek-objek data awal (seperti objek Character dengan berbagai tipe dan level, serta objek CharacterManager).   Di sinilah data karakter dimasukkan (addCharacter) ke dalam wadah penyimpanan utama sebelum aplikasi grafis dijalankan.   Kelas CharacterManager sebagai Model:Bertindak sebagai komponen Model dalam arsitektur MVC yang bertanggung jawab secara penuh terhadap pengelolaan data (penyimpanan menggunakan List, penambahan, dan pengambilan data karakter).Memisahkan logika pengelolaan data dari tampilan antarmuka sehingga struktur kode menjadi lebih terorganisir dan mudah dirawat.Kelas MainWindow sebagai View:Bertindak sebagai komponen View berbasis Java Swing (JFrame) yang bertugas merender antarmuka grafis kepada pengguna.   MainWindow menerima objek CharacterManager melalui konstruktor, lalu mengambil data yang ada di dalamnya (misalnya menghitung jumlah karakter atau menampilkan statistik) untuk divisualisasikan ke layar pengguna.   
+https://docs.google.com/document/d/1J4OtiaYZz4v1rPReHj13KSd5sA7ZpX3M/edit?usp=drivesdk&ouid=101012916292260884621&rtpof=true&sd=true
